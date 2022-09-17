@@ -98,6 +98,6 @@ int main()
 	cout << "Calling static member function " << Student::giveSchoolId() << endl
 		 << endl;
 
-	// cout<<Student::x;
+	// cout<<Student::x; // error as 'x' is a private member
 	return 0;
 }

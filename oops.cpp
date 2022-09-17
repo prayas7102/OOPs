@@ -17,6 +17,7 @@ public:
 
 	static int giveSchoolId()
 	{
+		// static function can only access static variables in this class
 		return schoolId;
 	}
 

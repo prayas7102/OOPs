@@ -7,17 +7,22 @@ class Student
 private:
 	int rollNo;
 	string name;
-
+	static const int x;
 public:
 	// Student(){
 	// 	cout<<"simple constructor is called"<<endl;
 	// }
 
+	// ISO C++ forbids in-class initialization of 
+	// non-const static member 'Student::schoolId'
+
 	static int schoolId;
 
 	static int giveSchoolId()
 	{
-		// static function can only access static variables in this class
+		// static function can only access static 
+		// variables in this class
+
 		return schoolId;
 	}
 
@@ -64,6 +69,7 @@ public:
 };
 
 int Student::schoolId = 1911;
+const int Student::x = 1;
 
 int main()
 {
@@ -92,5 +98,6 @@ int main()
 	cout << "Calling static member function " << Student::giveSchoolId() << endl
 		 << endl;
 
+	// cout<<Student::x;
 	return 0;
 }

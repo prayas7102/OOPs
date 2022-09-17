@@ -8,19 +8,20 @@ private:
 	int rollNo;
 	string name;
 	static const int x;
+
 public:
 	// Student(){
 	// 	cout<<"simple constructor is called"<<endl;
 	// }
 
-	// ISO C++ forbids in-class initialization of 
+	// ISO C++ forbids in-class initialization of
 	// non-const static member 'Student::schoolId'
 
 	static int schoolId;
 
 	static int giveSchoolId()
 	{
-		// static function can only access static 
+		// static function can only access static
 		// variables in this class
 
 		return schoolId;

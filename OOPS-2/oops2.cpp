@@ -6,28 +6,34 @@ class Human
 {
 public:
     int weight;
-    void setWeight(int weight){
-        this->weight=weight;
+    void setWeight(int weight)
+    {
+        this->weight = weight;
     }
-    void sleep(){
-        cout<<"Human sleeping"<<endl;
+    void sleep()
+    {
+        cout << "Human sleeping" << endl;
     }
 };
 
-class Male{ // : public Human
+class Male
+{ // : public Human
 public:
     string color;
-    void sleep(){
-        cout<<"Male sleeping"<<endl;
+    void sleep()
+    {
+        cout << "Male sleeping" << endl;
     }
 };
 
-class Female: public Human, public Male{
+class Female : public Human, public Male
+{
 public:
-    void operator+(Female &obj){
-        int val1=obj.weight;
-        int val2=this->weight;
-        cout<<val2+val1<<endl;
+    void operator+(Female &obj)
+    {
+        int val1 = obj.weight;
+        int val2 = this->weight;
+        cout << val2 + val1 << endl;
     }
 };
 
@@ -38,19 +44,18 @@ int main()
     // boy.setWeight(50);
     // cout<<boy.weight;
 
-    cout<<"Inheritence ambiguity tackled with scope resolution operator\n\n";
-    Female moti,choti;
+    cout << "Inheritence ambiguity tackled with scope resolution operator\n\n";
+    Female moti, choti;
     // moti.sleep(); error: request for member 'sleep' is ambiguous moti.sleep();
 
     moti.Human::sleep();
     moti.Male::sleep();
-    cout<<"\n\n";
+    cout << "\n\n";
 
-    cout<<"operator + overloading\n";
+    cout << "operator + overloading\n";
     moti.setWeight(10);
     choti.setWeight(15);
-    moti+choti;
-
+    moti + choti;
 
     return 0;
 }
